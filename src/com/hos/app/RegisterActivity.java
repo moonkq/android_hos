@@ -7,6 +7,9 @@ import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -66,12 +69,56 @@ public class RegisterActivity extends Activity implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.bt_register:
 			System.out.println("注册");
+//			dialog();//选择主用类型对话框
 			register();
 			break;
 
 		default:
 			break;
 		}
+	}
+
+	// 生成选择  "注册类型" 对话框
+	protected void dialog() {
+		AlertDialog.Builder builder = new Builder(RegisterActivity.this);
+		builder.setTitle("选择");
+		builder.setIcon(R.drawable.ic_launcher);
+		builder.setMessage("请选择您的用户类型：");
+
+		builder.setPositiveButton("个人", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+//				Uri uri = Uri.parse("http://www.baidu.com/");// 打开链接
+//				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//				startActivity(intent);
+				perRegister();
+
+			}
+
+		});
+
+		builder.setNegativeButton("机构", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				orgRegister();
+
+			}
+		});
+
+		builder.show();
+
+	}
+	
+	// 机构注册
+	private void orgRegister(){
+		System.out.println("机构注册");
+	}
+	// 个人注册
+	private void perRegister(){
+		System.out.println("个人注册");
 	}
 
 	/**
@@ -115,7 +162,6 @@ public class RegisterActivity extends Activity implements OnClickListener {
 					}
 				});
 
-		
 	}
 
 }

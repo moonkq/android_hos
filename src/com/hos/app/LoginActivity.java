@@ -10,6 +10,9 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -72,8 +75,9 @@ public class LoginActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.bt_register:
-			intent = new Intent(this, RegisterActivity.class);
-			startActivity(intent);
+			dialog();
+//			intent = new Intent(this, RegisterActivity.class);
+//			startActivity(intent);
 			overridePendingTransition(0, 0);
 			break;
 		case R.id.bt_login:
@@ -140,5 +144,39 @@ public class LoginActivity extends Activity implements OnClickListener {
 						}
 					}
 				});
+	}
+	
+	// 生成选择  "注册类型" 对话框
+	protected void dialog() {
+		AlertDialog.Builder builder = new Builder(LoginActivity.this);
+		builder.setTitle("选择");
+		builder.setIcon(R.drawable.ic_launcher);
+		builder.setMessage("请选择您的用户类型：");
+
+		builder.setPositiveButton("个人", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				//perRegister();
+				intent = new Intent(LoginActivity.this, RegisterActivity.class);
+				startActivity(intent);
+				overridePendingTransition(0, 0);
+
+			}
+
+		});
+
+		builder.setNegativeButton("机构", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				//orgRegister();
+
+			}
+		});
+
+		builder.show();
+
 	}
 }
