@@ -3,7 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="#2197db">
+
+
+
+        <ImageView
+            android:id="@+id/loginbutton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="医疗系统登录" />
+
 
     <EditText
         android:id="@+id/et_account"
@@ -30,8 +47,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-         >
+        android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/bt_login"
@@ -46,11 +62,10 @@
             android:id="@+id/bt_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="77dp"
-           android:layout_alignParentRight="true"
             android:text="注册" />
-
     </RelativeLayout>
 
 </LinearLayout>
