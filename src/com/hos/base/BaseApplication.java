@@ -1,25 +1,41 @@
 package com.hos.base;
 
+import java.io.File;
+
 import android.app.Application;
 import android.content.Context;
 
+import com.jorge.circleviewpager.FileUtils;
 import com.lidroid.xutils.HttpUtils;
+import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.LRULimitedMemoryCache;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 /**
- * BaseApplicationÀà,Ó¦ÓÃ³ÌĞòµÄ×î³õÊ¼Èë¿Ú¡£
- * ×÷ÓÃ£º¶¨ÒåÈ«¾Ö±äÁ¿¡£
+ * BaseApplicationç±»,åº”ç”¨ç¨‹åºçš„æœ€åˆå§‹å…¥å£ã€‚
+ * ä½œç”¨ï¼šå®šä¹‰å…¨å±€å˜é‡ã€‚
  * @author Administrator
  *
  */
 public class BaseApplication extends Application {
+	
+	/** å…¨å±€Contextï¼ŒåŸç†æ˜¯å› ä¸ºApplicationç±»æ˜¯åº”ç”¨æœ€å…ˆè¿è¡Œçš„ï¼Œæ‰€ä»¥åœ¨æˆ‘ä»¬çš„ä»£ç è°ƒç”¨æ—¶ï¼Œè¯¥å€¼å·²ç»è¢«èµ‹å€¼è¿‡äº† */
+	private static BaseApplication mInstance;
 
-	private static Context context;//ÉÏÏÂÎÄ¶ÔÏó
-	private static HttpUtils utils;//ÍøÂçÇëÇó¶ÔÏó
+	private static Context context;//ä¸Šä¸‹æ–‡å¯¹è±¡
+	private static HttpUtils utils;//ç½‘ç»œè¯·æ±‚å¯¹è±¡
 
 	@Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
+		mInstance = this;
+		
 		super.onCreate();
 		context = getApplicationContext();
+		
+		initImageLoader();
 	}
 
 	public static Context getContext() {
@@ -32,12 +48,26 @@ public class BaseApplication extends Application {
 	
 	public synchronized static HttpUtils getInstence() {
 		if (utils == null) {
-			// ÉèÖÃÇëÇó³¬Ê±Ê±¼äÎª10Ãë
+			// è®¾ç½®è¯·æ±‚è¶…æ—¶æ—¶é—´ä¸º10ç§’
 			utils = new HttpUtils(1000 * 10);
 			utils.configSoTimeout(1000 * 10);
 			utils.configResponseTextCharset("UTF-8");
 		}
 		return utils;
 	}
+	
+	public void initImageLoader(){
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(mInstance)
+                .threadPriority(Thread.NORM_PRIORITY + 2)
+                .denyCacheImageMultipleSizesInMemory()
+                .threadPoolSize(10)
+                .discCacheFileNameGenerator(new Md5FileNameGenerator())
+                .tasksProcessingOrder(QueueProcessingType.LIFO)
+                .diskCache(new UnlimitedDiskCache(new File(FileUtils.getIconDir(this))))
+                .memoryCache(new LRULimitedMemoryCache(2*1024*1024))
+                .build();
+
+        ImageLoader.getInstance().init(config);
+}
 
 }

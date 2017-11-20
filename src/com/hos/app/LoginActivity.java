@@ -81,7 +81,12 @@ public class LoginActivity extends Activity implements OnClickListener {
 			overridePendingTransition(0, 0);
 			break;
 		case R.id.bt_login:
-			login();
+			//login();
+			
+			// 调试 跳转到 主Activity
+			intent = new Intent(LoginActivity.this, MainActivity.class);
+			startActivity(intent);
+			
 			break;
 
 		default:
