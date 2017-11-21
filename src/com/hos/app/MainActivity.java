@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
 		  /** 找到轮播控件*/
         imageCycleView= (ImageCycleView) findViewById(R.id.cycleView);
 
-        imageCycleView.setCycle_T(ImageCycleView.CYCLE_T.CYCLE_VIEW_NORMAL);
+        imageCycleView.setCycle_T(ImageCycleView.CYCLE_T.CYCLE_VIEW_THREE_SCALE);
         /**装在数据的集合  文字描述*/
         ArrayList<String> imageDescList=new ArrayList<String>();
         /**装在数据的集合  图片地址*/
@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
         /**设置数据*/
         imageCycleView.setImageResources(imageDescList,urlList, mAdCycleViewListener);
         // 是否隐藏底部
-        imageCycleView.hideBottom(true);
+        imageCycleView.hideBottom(false);
         imageCycleView.startImageCycle();
     }
 	

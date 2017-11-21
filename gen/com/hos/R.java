@@ -23,6 +23,7 @@ public final class R {
         public static final int colorPrimaryDark=0x7f040001;
         public static final int color_blue_light=0x7f040003;
         public static final int comm_gray_low_small=0x7f040015;
+        public static final int font_pressed_green=0x7f04001a;
         public static final int gray=0x7f040008;
         public static final int gray_light=0x7f04000f;
         public static final int green=0x7f040009;
@@ -47,28 +48,47 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int font_size=0x7f050002;
     }
     public static final class drawable {
         public static final int banner_dot_focus=0x7f020000;
         public static final int banner_dot_normal=0x7f020001;
-        public static final int edittext_shap=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int welcome=0x7f020004;
+        public static final int bottom_bar=0x7f020002;
+        public static final int edittext_shap=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int tab_feedback_normal=0x7f020005;
+        public static final int tab_help_normal=0x7f020006;
+        public static final int tab_rank_normal=0x7f020007;
+        public static final int tab_type_pressed=0x7f020008;
+        public static final int welcome=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000c;
-        public static final int ad_rl=0x7f090007;
-        public static final int adv_pager=0x7f090008;
+        public static final int action_settings=0x7f090019;
+        public static final int ad_rl=0x7f090014;
+        public static final int adv_pager=0x7f090015;
         public static final int bt_login=0x7f090003;
         public static final int bt_register=0x7f090004;
-        public static final int circles=0x7f090009;
+        public static final int circles=0x7f090016;
         public static final int cycleView=0x7f090005;
         public static final int et_account=0x7f090001;
-        public static final int et_name=0x7f090006;
+        public static final int et_name=0x7f090013;
         public static final int et_password=0x7f090002;
-        public static final int iv=0x7f09000b;
+        public static final int imageView_feedback=0x7f090011;
+        public static final int imageView_help=0x7f09000e;
+        public static final int imageView_rank=0x7f090008;
+        public static final int imageView_type=0x7f09000b;
+        public static final int iv=0x7f090018;
         public static final int loginbutton=0x7f090000;
-        public static final int viewGroup2=0x7f09000a;
+        public static final int main_bottom=0x7f090006;
+        public static final int tabLayout_feedback=0x7f090010;
+        public static final int tabLayout_help=0x7f09000d;
+        public static final int tabLayout_rank=0x7f090007;
+        public static final int tabLayout_type=0x7f09000a;
+        public static final int textView_feedback=0x7f090012;
+        public static final int textView_help=0x7f09000f;
+        public static final int textView_rank=0x7f090009;
+        public static final int textView_type=0x7f09000c;
+        public static final int viewGroup2=0x7f090017;
     }
     public static final class layout {
         public static final int activity_login=0x7f030000;
@@ -84,9 +104,13 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int feedback=0x7f060008;
         public static final int hello_world=0x7f060002;
+        public static final int help=0x7f060007;
+        public static final int speed_records=0x7f060006;
         public static final int title_activity_login=0x7f060003;
         public static final int title_activity_register=0x7f060004;
+        public static final int type_test=0x7f060005;
     }
     public static final class style {
         /** 
