@@ -8,9 +8,9 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
     
-    <string name="type_test">打字测速</string>
-    <string name="speed_records">速度排名</string>
-    <string name="help">使用帮助</string>
+    <string name="type_test">首页</string>
+    <string name="speed_records">签约</string>
+    <string name="help">我的</string>
     <string name="feedback">用户反馈</string>
 
 </resources>

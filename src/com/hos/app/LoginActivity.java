@@ -75,7 +75,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.bt_register:
-			dialog();
+			dialog();// 弹出对话框，选择是"个人注册"、"机构注册"
 //			intent = new Intent(this, RegisterActivity.class);
 //			startActivity(intent);
 			overridePendingTransition(0, 0);
@@ -177,6 +177,8 @@ public class LoginActivity extends Activity implements OnClickListener {
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
 				//orgRegister();
+				intent = new Intent(LoginActivity.this, SignActivity.class);//修改ia
+				startActivity(intent);
 
 			}
 		});

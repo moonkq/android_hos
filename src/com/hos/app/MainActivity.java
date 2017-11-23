@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hos.R;
@@ -17,6 +18,9 @@ import com.jorge.circlelibrary.ImageCycleView;
 import com.jorge.circleviewpager.ImageLoaderHelper;
 
 public class MainActivity extends Activity {
+	
+	private ImageView rankImage, typeImage, helpImage, feedbackImage;// tab中的图片
+	private TextView rankText, typeText, helpText, feedbackText;// tab中的文字
 	
 	ImageCycleView imageCycleView;
 
@@ -96,5 +100,27 @@ public class MainActivity extends Activity {
         dm = context.getApplicationContext().getResources().getDisplayMetrics();
         return dm.heightPixels;
     }
+    
+	/**
+	 * 初始化视图
+	 */
+	public void initViews() {
+//		rankTab = (LinearLayout) findViewById(R.id.tabLayout_rank);
+//		typeTab = (LinearLayout) findViewById(R.id.tabLayout_type);
+//		helpTab = (LinearLayout) findViewById(R.id.tabLayout_help);
+//		feedbackTab = (LinearLayout) findViewById(R.id.tabLayout_feedback);
+//		rankTab.setOnClickListener(new TabOnClickListener(0));
+//		typeTab.setOnClickListener(new TabOnClickListener(1));
+//		helpTab.setOnClickListener(new TabOnClickListener(2));
+//		feedbackTab.setOnClickListener(new TabOnClickListener(3));
+		rankImage = (ImageView) findViewById(R.id.imageView_rank);
+		typeImage = (ImageView) findViewById(R.id.imageView_type);
+		helpImage = (ImageView) findViewById(R.id.imageView_help);
+		feedbackImage = (ImageView) findViewById(R.id.imageView_feedback);
+		rankText = (TextView) findViewById(R.id.textView_rank);
+		typeText = (TextView) findViewById(R.id.textView_type);
+		helpText = (TextView) findViewById(R.id.textView_help);
+		feedbackText = (TextView) findViewById(R.id.textView_feedback);
+	}
 
 }

@@ -115,6 +115,8 @@ public class RegisterActivity extends Activity implements OnClickListener {
 	// 机构注册
 	private void orgRegister(){
 		System.out.println("机构注册");
+		intent = new Intent(RegisterActivity.this, SignActivity.class);//修改ia
+		startActivity(intent);
 	}
 	// 个人注册
 	private void perRegister(){

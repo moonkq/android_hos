@@ -63,40 +63,52 @@ public final class R {
         public static final int welcome=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f090019;
-        public static final int ad_rl=0x7f090014;
-        public static final int adv_pager=0x7f090015;
-        public static final int bt_login=0x7f090003;
-        public static final int bt_register=0x7f090004;
-        public static final int circles=0x7f090016;
-        public static final int cycleView=0x7f090005;
-        public static final int et_account=0x7f090001;
-        public static final int et_name=0x7f090013;
-        public static final int et_password=0x7f090002;
-        public static final int imageView_feedback=0x7f090011;
-        public static final int imageView_help=0x7f09000e;
-        public static final int imageView_rank=0x7f090008;
-        public static final int imageView_type=0x7f09000b;
-        public static final int iv=0x7f090018;
-        public static final int loginbutton=0x7f090000;
-        public static final int main_bottom=0x7f090006;
-        public static final int tabLayout_feedback=0x7f090010;
-        public static final int tabLayout_help=0x7f09000d;
-        public static final int tabLayout_rank=0x7f090007;
-        public static final int tabLayout_type=0x7f09000a;
-        public static final int textView_feedback=0x7f090012;
-        public static final int textView_help=0x7f09000f;
-        public static final int textView_rank=0x7f090009;
-        public static final int textView_type=0x7f09000c;
-        public static final int viewGroup2=0x7f090017;
+        public static final int action_settings=0x7f090022;
+        public static final int ad_rl=0x7f09001a;
+        public static final int adv_pager=0x7f09001b;
+        public static final int bt_login=0x7f090008;
+        public static final int bt_register=0x7f090009;
+        public static final int circles=0x7f09001c;
+        public static final int cycleView=0x7f09000a;
+        public static final int et_account=0x7f090006;
+        public static final int et_name=0x7f090018;
+        public static final int et_password=0x7f090007;
+        public static final int id=0x7f09001f;
+        public static final int imageView_feedback=0x7f090016;
+        public static final int imageView_help=0x7f090013;
+        public static final int imageView_rank=0x7f09000d;
+        public static final int imageView_type=0x7f090010;
+        public static final int iv=0x7f09001e;
+        public static final int loginbutton=0x7f090005;
+        public static final int lv_access=0x7f090001;
+        public static final int lvsign=0x7f090019;
+        public static final int main_bottom=0x7f09000b;
+        public static final int name=0x7f090020;
+        public static final int rb_order=0x7f090004;
+        public static final int rb_restaurant=0x7f090003;
+        public static final int rg_menu=0x7f090002;
+        public static final int score=0x7f090021;
+        public static final int tabLayout_feedback=0x7f090015;
+        public static final int tabLayout_help=0x7f090012;
+        public static final int tabLayout_rank=0x7f09000c;
+        public static final int tabLayout_type=0x7f09000f;
+        public static final int textView_feedback=0x7f090017;
+        public static final int textView_help=0x7f090014;
+        public static final int textView_rank=0x7f09000e;
+        public static final int textView_type=0x7f090011;
+        public static final int tv_restname=0x7f090000;
+        public static final int viewGroup2=0x7f09001d;
     }
     public static final class layout {
-        public static final int activity_login=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int activity_register=0x7f030002;
-        public static final int block_ad_cycle_view=0x7f030003;
-        public static final int item_vp=0x7f030004;
-        public static final int welcome=0x7f030005;
+        public static final int activity_access=0x7f030000;
+        public static final int activity_login=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int activity_register=0x7f030003;
+        public static final int activity_signlist=0x7f030004;
+        public static final int block_ad_cycle_view=0x7f030005;
+        public static final int item_vp=0x7f030006;
+        public static final int listview_item_sign=0x7f030007;
+        public static final int welcome=0x7f030008;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -139,5 +151,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        public static final int TextSizeAndColor=0x7f070002;
     }
 }
