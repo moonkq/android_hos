@@ -9,7 +9,7 @@ import android.widget.ListView;
 import com.hos.R;
 import com.hos.entities.AccessRec;
 /**
- * 随访
+ * 随访Activity
  */
 public class FollowupActivity extends Activity {
 	

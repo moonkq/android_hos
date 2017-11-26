@@ -29,6 +29,7 @@ public class BaseApplication extends Application {
 
 	@Override
 	public void onCreate() {
+		
 		// TODO Auto-generated method stub
 		mInstance = this;
 		
@@ -36,6 +37,7 @@ public class BaseApplication extends Application {
 		context = getApplicationContext();
 		
 		initImageLoader();
+		
 	}
 
 	public static Context getContext() {
@@ -55,7 +57,7 @@ public class BaseApplication extends Application {
 		}
 		return utils;
 	}
-	
+	// 首页 广告轮播组件图片处理方法
 	public void initImageLoader(){
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(mInstance)
                 .threadPriority(Thread.NORM_PRIORITY + 2)

@@ -1,8 +1,6 @@
 package com.hos.constant;
 /**
- * ³£Á¿Àà
- * @author Administrator
- *
+ * è®¿é—®æœåŠ¡å™¨ç«¯æ¥å£ç±»
  */
 public class Constants {
 	public static String RESTAURANTURL = "http://192.168.18.185/LittleDin/showRestaurants";

@@ -145,6 +145,7 @@ public class RegisterActivity extends Activity implements OnClickListener {
 		lsit.add(new BasicNameValuePair("userPassword", userPassword));
 		params.addBodyParameter(lsit);
 		params.addHeader("Cookie", sessionId);
+		// 访问服务器端对应接口 URL
 		utils.send(HttpMethod.POST, Constants.REGISTERURL, params,
 				new RequestCallBack<String>() {
 					@Override

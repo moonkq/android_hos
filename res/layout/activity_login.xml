@@ -4,9 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-    android:background="#2197db">
-
-
+    android:background="#C0D9D9">
 
         <ImageView
             android:id="@+id/loginbutton"

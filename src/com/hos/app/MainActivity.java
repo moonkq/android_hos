@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
@@ -22,6 +23,9 @@ public class MainActivity extends Activity {
 	private ImageView rankImage, typeImage, helpImage, feedbackImage;// tab中的图片
 	private TextView rankText, typeText, helpText, feedbackText;// tab中的文字
 	
+	private Intent intent;// 意图
+	private TextView tvSuifangfunc, tvYuliufunc;// 随访功能、预留功能
+	
 	ImageCycleView imageCycleView;
 
 	@Override
@@ -39,21 +43,44 @@ public class MainActivity extends Activity {
         ArrayList<String> urlList=new ArrayList<String>();
 
         /**添加数据*/
-        urlList.add("http://attach.bbs.miui.com/forum/month_1012/101203122706c89249c8f58fcc.jpg");
-        urlList.add("http://bbsdown10.cnmo.com/attachments/201308/06/091441rn5ww131m0gj55r0.jpg");
+        urlList.add("http://img.zcool.cn/community/0137475822e952a84a0e282b74fa86.jpg");
+        urlList.add("http://img3.imgtn.bdimg.com/it/u=1795177524,2704947397&fm=27&gp=0.jpg");
 //        urlList.add("http://kuoo8.com/wall_up/hsf2288/200801/2008012919460743597.jpg");
-        urlList.add("http://attach.bbs.miui.com/forum/201604/05/001754vp6j0vmcj49f0evc.jpg.thumb.jpg");
-        urlList.add("http://d.3987.com/taiqiumein_141001/007.jpg");
-        urlList.add("http://attach.bbs.miui.com/forum/201604/05/100838d2b99k6ihk32a36a.jpg.thumb.jpg");
+        urlList.add("http://pic.58pic.com/58pic/17/70/31/557ac8e23e5ab_1024.jpg");
+        urlList.add("http://pic23.nipic.com/20120820/5592025_103930142191_2.jpg");
+        urlList.add("http://pic.58pic.com/58pic/17/20/70/28858PICjxE_1024.jpg");
 
-        imageDescList.add("小仓柚子");
-        imageDescList.add("抚媚妖娆性感美女");
-        imageDescList.add("热血沸腾 比基尼");
-        imageDescList.add(" 台球美女");
-        imageDescList.add("身材妙曼");
+        imageDescList.add("社区互联网医院");
+        imageDescList.add("健康保险医疗服务");
+        imageDescList.add("社区门诊随访");
+        imageDescList.add("医疗专家团队");
+        imageDescList.add("一流服务品质");
 
 
         initCarsuelView(imageDescList, urlList);
+        
+        // 跳转到随访功能
+        tvSuifangfunc = (TextView) findViewById(R.id.suifangfunc);
+        tvSuifangfunc.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				intent = new Intent(MainActivity.this, SignActivity.class);//修改ia
+				startActivity(intent);
+				
+			}
+		});
+        // 跳转到预留功能
+        tvYuliufunc = (TextView) findViewById(R.id.yuliufunc);
+        tvYuliufunc.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				intent = new Intent(MainActivity.this, MapActivity.class);//预留功能，暂且配置到高德地图SDK
+				startActivity(intent);
+				
+			}
+		});
 	}
 
 	@Override

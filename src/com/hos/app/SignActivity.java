@@ -18,9 +18,6 @@ import com.hos.entities.AccessRec;
  */
 public class SignActivity extends Activity {
 	
-	
-	
-	
 	private List<AccessRec> records;// 随访列表数据
 	protected ListView lvSign;// 随访列表
 	
@@ -42,7 +39,7 @@ public class SignActivity extends Activity {
 		// 基础数据
 		String[] ids = {"0001","0002","0003","0004","0005"};
 		String[] names = {"赵一","钱二","孙三","李四","周五"};
-		float[] scores = {92.0f, 85.5f, 93.0f, 60.0f, 78.5f};
+		float[] scores = {26.0f, 30.5f, 33.0f, 60.0f, 55.5f};
 		
 		// 将原有数据组合成SimpleAdapter可以接受的数据类型
 		List data = new ArrayList();

@@ -35,9 +35,6 @@ import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
 
 /**
  * 登录的Activity
- * 
- * @author Administrator
- * 
  */
 public class LoginActivity extends Activity implements OnClickListener {
 
@@ -46,7 +43,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 	private Button btRegister = null;// 注册按钮
 	private Button btLogin = null;// 登录按钮
 	private String userAccount = null;// 用户账号
-	private String userPassword = null;// 用户面
+	private String userPassword = null;// 用户密码
 	private HttpUtils utils = Utils.getHttpUtils();// 网络请求对象
 	private RequestParams params = null;// 请求参数
 	private Intent intent = null;// 意图
@@ -84,6 +81,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 			//login();
 			
 			// 调试 跳转到 主Activity
+			//intent = new Intent(LoginActivity.this, MapActivity.class);// 调试跳转到高德 地图
 			intent = new Intent(LoginActivity.this, MainActivity.class);
 			startActivity(intent);
 			

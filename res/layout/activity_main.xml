@@ -3,138 +3,160 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
     <com.jorge.circlelibrary.ImageCycleView
-    android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:id="@+id/cycleView"/>
- 
+        android:id="@+id/cycleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/suifangfunc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="随访功能"
+        android:clickable="true"
+        android:textSize="54dp"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/yuliufunc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="预留功能（地图访问）"
+        android:clickable="true"
+        android:textSize="34dp"
+        android:textColor="@color/black"/>
+
     <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#eee"
-    android:orientation="vertical" >
-    
-    <RelativeLayout
-        android:id="@+id/main_bottom"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/bottom_bar"
+        android:layout_height="match_parent"
+        android:background="#eee"
         android:orientation="vertical" >
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/main_bottom"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="2dp" >
+            android:background="@drawable/bottom_bar"
+            android:orientation="vertical" >
 
             <LinearLayout
-                android:id="@+id/tabLayout_rank"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="2dp" >
 
-                <ImageView
-                    android:id="@+id/imageView_rank"
+                <LinearLayout
+                    android:id="@+id/tabLayout_rank"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:scaleType="matrix"
-                    android:src="@drawable/tab_rank_normal" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" >
 
-                <TextView
-                    android:id="@+id/textView_rank"
+                    <ImageView
+                        android:id="@+id/imageView_rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:scaleType="matrix"
+                        android:src="@drawable/tab_rank_normal" />
+
+                    <TextView
+                        android:id="@+id/textView_rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/speed_records"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabLayout_type"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/speed_records"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_size" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" >
 
+                    <ImageView
+                        android:id="@+id/imageView_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:scaleType="matrix"
+                        android:src="@drawable/tab_type_pressed" />
+
+                    <TextView
+                        android:id="@+id/textView_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/type_test"
+                        android:textColor="@color/font_pressed_green"
+                        android:textSize="@dimen/font_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabLayout_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/imageView_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:scaleType="matrix"
+                        android:src="@drawable/tab_help_normal" />
+
+                    <TextView
+                        android:id="@+id/textView_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/help"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabLayout_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/imageView_feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:scaleType="matrix"
+                        android:src="@drawable/tab_feedback_normal" />
+
+                    <TextView
+                        android:id="@+id/textView_feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feedback"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size" />
+                </LinearLayout>
             </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tabLayout_type"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:id="@+id/imageView_type"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:scaleType="matrix"
-                    android:src="@drawable/tab_type_pressed" />
-
-                <TextView
-                    android:id="@+id/textView_type"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/type_test"
-                    android:textColor="@color/font_pressed_green"
-                    android:textSize="@dimen/font_size" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tabLayout_help"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:id="@+id/imageView_help"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:scaleType="matrix"
-                    android:src="@drawable/tab_help_normal" />
-
-                <TextView
-                    android:id="@+id/textView_help"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/help"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_size" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tabLayout_feedback"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:id="@+id/imageView_feedback"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:scaleType="matrix"
-                    android:src="@drawable/tab_feedback_normal" />
-
-                <TextView
-                    android:id="@+id/textView_feedback"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/feedback"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_size" />
-
-            </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
     </RelativeLayout>
-    
-    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="随访功能"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size" />
 
 </LinearLayout>
