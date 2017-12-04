@@ -9,39 +9,39 @@ import android.content.SharedPreferences.Editor;
 import com.hos.base.BaseApplication;
 import com.lidroid.xutils.HttpUtils;
 /**
- * ¹¤¾ßÀà
+ * å·¥å…·ç±»
  * @author Administrator
  *
  */
 public class Utils {
 	/**
-	 * °ÑÕûÊı×ª»»ÎªĞÇÆÚ
-	 * @param i ÕûĞÍ
+	 * æŠŠæ•´æ•°è½¬æ¢ä¸ºæ˜ŸæœŸ
+	 * @param i æ•´å‹
 	 * @return
 	 */
 	public static String getDate(int i) {
 		String date = null;
 		switch (i) {
 		case 1:
-			date = "ĞÇÆÚÒ»";
+			date = "æ˜ŸæœŸä¸€";
 			break;
 		case 2:
-			date = "ĞÇÆÚ¶ş";
+			date = "æ˜ŸæœŸäºŒ";
 			break;
 		case 3:
-			date = "ĞÇÆÚÈı";
+			date = "æ˜ŸæœŸä¸‰";
 			break;
 		case 4:
-			date = "ĞÇÆÚËÄ";
+			date = "æ˜ŸæœŸå››";
 			break;
 		case 5:
-			date = "ĞÇÆÚÎå";
+			date = "æ˜ŸæœŸäº”";
 			break;
 		case 6:
-			date = "ĞÇÆÚÁù";
+			date = "æ˜ŸæœŸå…­";
 			break;
 		case 7:
-			date = "ĞÇÆÚÈÕ";
+			date = "æ˜ŸæœŸæ—¥";
 			break;
 
 		default:
@@ -50,20 +50,20 @@ public class Utils {
 		return date;
 
 	}
-/**
- * µÃµ½Ò»¸ö[0,9)µÄËæ»úÕûÊı
- * @return
- */
-	public static int getInt() {
+	/**
+	 * å¾—åˆ°ä¸€ä¸ª[0,9)çš„éšæœºæ•´æ•°
+	 * @return
+	 */
+		public static int getInt() {
 
-		Random ra = new Random();
-		int i = ra.nextInt(9);
-		return i;
+			Random ra = new Random();
+			int i = ra.nextInt(9);
+			return i;
 
-	}
+		}
 
 	/**
-	 * »ñÈ¡ÉÏÏÂÎÄ
+	 * è·å–ä¸Šä¸‹æ–‡
 	 * 
 	 * @return
 	 */
@@ -76,12 +76,12 @@ public class Utils {
 	private static Editor editor = sp.edit();
 
 	/**
-	 * ´æ×Ö·û´®µ½SharedPreferencesÖĞ
+	 * å­˜å­—ç¬¦ä¸²åˆ°SharedPreferencesä¸­
 	 * 
 	 * @param key
-	 *            ¼ü
+	 *            é”®
 	 * @param value
-	 *            Öµ
+	 *            å€¼
 	 */
 	public static void putSP(String key, String value) {
 		editor.putString(key, value);
@@ -89,11 +89,11 @@ public class Utils {
 	}
 
 	/**
-	 * ´ÓSharedPreferencesÖĞ»ñÈ¡×Ö·û´®
+	 * ä»SharedPreferencesä¸­è·å–å­—ç¬¦ä¸²
 	 * 
 	 * @param key
-	 *            ¼ü
-	 * @return Öµ
+	 *            é”®
+	 * @return å€¼
 	 */
 	public static String getSP(String key) {
 		String name;
@@ -105,7 +105,7 @@ public class Utils {
 	private static HttpUtils utils;
 
 	/**
-	 * µÃµ½utils
+	 * å¾—åˆ°utils
 	 */
 	public static synchronized HttpUtils getHttpUtils() {
 		if (utils == null) {

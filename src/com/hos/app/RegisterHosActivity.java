@@ -31,12 +31,12 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
 
 /**
- * 个人注册的Activity
+ * 机构注册的Activity
  * 
  * @author Administrator
  * 
  */
-public class RegisterActivity extends Activity implements OnClickListener {
+public class RegisterHosActivity extends Activity implements OnClickListener {
 
 	private EditText edName;// 姓名输入框
 	private EditText edAccount;// 账户名输入框
@@ -53,11 +53,11 @@ public class RegisterActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_register);
-		edAccount = (EditText) findViewById(R.id.et_account);
-		edName = (EditText) findViewById(R.id.et_nameReg);
-		edPassword = (EditText) findViewById(R.id.et_passwordReg);
-		btRegister = (Button) findViewById(R.id.bt_registerReg);
+		setContentView(R.layout.activity_register_hos);
+		edAccount = (EditText) findViewById(R.id.et_accountRegHos);
+		edName = (EditText) findViewById(R.id.et_nameRegHos);
+		edPassword = (EditText) findViewById(R.id.et_passwordRegHos);
+		btRegister = (Button) findViewById(R.id.bt_registerRegHos);
 		btRegister.setOnClickListener(this);
 	}
 
@@ -80,7 +80,7 @@ public class RegisterActivity extends Activity implements OnClickListener {
 
 	// 生成选择  "注册类型" 对话框
 	protected void dialog() {
-		AlertDialog.Builder builder = new Builder(RegisterActivity.this);
+		AlertDialog.Builder builder = new Builder(RegisterHosActivity.this);
 		builder.setTitle("选择");
 		builder.setIcon(R.drawable.ic_launcher);
 		builder.setMessage("请选择您的用户类型：");
@@ -115,7 +115,7 @@ public class RegisterActivity extends Activity implements OnClickListener {
 	// 机构注册
 	private void orgRegister(){
 		System.out.println("机构注册");
-		intent = new Intent(RegisterActivity.this, SignActivity.class);//修改ia
+		intent = new Intent(RegisterHosActivity.this, SignActivity.class);//修改ia
 		startActivity(intent);
 	}
 	// 个人注册

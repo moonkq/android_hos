@@ -58,6 +58,7 @@
         </activity>
         <activity android:name=".app.SignActivity" />
         <activity android:name=".app.MapActivity" />
+        <activity android:name=".app.RegisterHosActivity" />
     </application>
 
 </manifest>
